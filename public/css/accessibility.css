@@ -1,0 +1,78 @@
+/* ----------------------------------------------------------------
+	Accessibility CSS Greenville County Schools
+-----------------------------------------------------------------*/
+/*This is for hiding content for sighted users */
+
+.hidden 
+{position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;}
+
+/*This is for skipping repetitive content for sighted users 
+<div id="skip"><a href="#content">Skip to Main Content</a></div>
+*/
+#skip {
+background-color: #fff;
+}
+#skip a
+{ 
+position:absolute; 
+left:-10000px; 
+top:-100px; 
+overflow:hidden;
+font-size:20px;
+padding:10px;
+background-color:#fff;
+} 
+ 
+#skip a:focus 
+{ 
+z-index:999;
+position:absolute; 
+left:0px;
+top:0px;
+background:#fff;
+outline:0;
+-webkit-transition:top .1s ease-in, background .5s linear;
+transition: top .1s ease-in, background .5s linear;
+} 
+/*This is for screen reader only content - alternative to .hidden above */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+.tdnowrap {
+	white-space:nowrap;
+}
+#tblstaff {
+	width:100%;
+}
+#tblstaff table {
+	border-collapse: collapse;
+}
+#tblstaff table, th, td {
+	border: 1px solid black;
+}
+#tblstaff th {
+	text-align: center;
+	font-weight:bold;
+	background-color: #efefef;
+	padding:5px;
+}
+#tblstaff td {
+	padding:5px;
+}
+a.btn {
+	white-space: normal;
+}
+/*Bootstrap accessibility corrections */
+.btn:focus{outline:dotted 2px #000}div.active:focus{outline:dotted 1px #000}a:focus{outline:dotted 1px #000}.close:hover,.close:focus{outline:dotted 1px #000}.nav>li>a:hover,.nav>li>a:focus{outline:dotted 1px #000}.carousel-indicators li,.carousel-indicators li.active{height:18px;width:18px;border-width:2px;position:relative;box-shadow:0px 0px 0px 1px #808080}.carousel-indicators.active li{background-color:rgba(100,149,253,0.6)}.carousel-indicators.active li.active{background-color:white}.carousel-tablist-highlight{display:block;position:absolute;outline:2px solid transparent;background-color:transparent;box-shadow:0px 0px 0px 1px transparent}.carousel-tablist-highlight.focus{outline:2px solid #6495ED;background-color:rgba(0,0,0,0.4)}a.carousel-control:focus{outline:2px solid #6495ED;background-image:linear-gradient(to right, transparent 0px, rgba(0,0,0,0.5) 100%);box-shadow:0px 0px 0px 1px #000000}.carousel-pause-button{position:absolute;top:-30em;left:-300em;display:block}.carousel-pause-button.focus{top:0.5em;left:0.5em}.carousel:hover .carousel-caption,.carousel.contrast .carousel-caption{background-color:rgba(0,0,0,0.5);z-index:10}.alert-success{color:#2d4821}.alert-info{color:#214c62}.alert-warning{color:#6c4a00;background-color:#f9f1c6}.alert-danger{color:#d2322d}.alert-danger:hover{color:#a82824}.btn-success {background-color: #387f38;border-color: #387f38;color: #FFFFFF;background-image:none;}.btn-success:hover,.btn-success:focus,.btn-success:active,.btn-success.active,.open .dropdown-toggle.btn-success {color: #FFFFFF;background-color: #2e692e;border-color: #2e692e;}.btn-warning {background-color: #955c0d;border-color: #955c0d;color: #FFFFFF;}.btn-warning:hover,.btn-warning:focus,.btn-warning:active,.btn-warning.active,.open .dropdown-toggle.btn-warning {color: #FFFFFF;background-color: #794b0b;border-color: #794b0b;}.btn-info {background-color: #3b51e7;border-color: #3b51e7;color: #FFFFFF;background-image:none;}.btn-info:hover,.btn-info:focus,.btn-info:active,.btn-info.active,.open .dropdown-toggle.btn-info {color: #FFFFFF;background-color: #1f3ae3;border-color: #1f3ae3;}.btn-danger {background-color: #d33a35;border-color: #d33a35;color: #FFFFFF;}.btn-danger:hover,.btn-danger:focus,.btn-danger:active,.btn-danger.active,.open .dropdown-toggle.btn-danger {color: #FFFFFF;background-color: #bf2f2a;border-color: #bf2f2a;}
